@@ -5,9 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+#include <dt-bindings/zmk/keys.h>
 
 / {
     combos {
@@ -15,12 +14,7 @@
 
         Backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <33 32>;
-        };
-
-        Tab {
-            bindings = <&kp TAB>;
-            key-positions = <2 3>;
+            key-positions = <22 21>;
         };
 
         CapsLock {
@@ -73,48 +67,50 @@
         compatible = "zmk,keymap";
 
         layer_0 {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |SH/ENT|
-//                    | GUI | LWR | ESC |   | SPC | RSE  | ALT |
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |SH/ENT|
+            //                    | GUI | LWR | ESC |   | SPC | RSE  | ALT |
+
             display-name = "main";
             bindings = <
-    &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-    &kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-    &kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT ENTER
-                             &kp LGUI  &mo 1  &kp ESC    &kp SPACE  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT ENTER
+                         &kp LGUI  &mo 1  &kp ESC    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
         layer_1 {
-// -----------------------------------------------------------------------------------------
-// |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |   ~  |
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   `  |
-// |      |     |     |     |     |     |   |  -  |  -  |  +  |  =  |  \  |   |  |
-//                    |     |     |     |   |     |     |     |
+            // -----------------------------------------------------------------------------------------
+            // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |   ~  |
+            // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   `  |
+            // |      |     |     |     |     |     |   |  -  |  -  |  +  |  =  |  \  |   |  |
+            //                    |     |     |     |   |     |     |     |
+
             display-name = "lower";
             bindings = <
-    &kp ESC  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(TILDE)
-    &trans   &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp GRAVE
-    &trans   &trans        &trans      &trans         &trans        &trans           &kp LS(UNDER)  &kp MINUS     &kp LS(PLUS)  &kp EQUAL     &kp BSLH      &kp LS(PIPE)
-                                       &trans         &trans        &trans           &trans         &trans        &trans
+&kp ESC  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(TILDE)
+&trans   &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp GRAVE
+&trans   &trans        &trans      &trans         &trans        &trans           &kp LS(UNDER)  &kp MINUS     &kp LS(PLUS)  &kp EQUAL     &kp BSLH      &kp LS(PIPE)
+                                   &trans         &trans        &trans           &trans         &trans        &trans
             >;
         };
 
         layer_2 {
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |PGUP | HME | UP  | END |  {  |   }  |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |PGDWN| LFT | DWN |RGHT |  [  |   ]  |
-// | F12  | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  |  F8 | F9  | F10 |  F11 |
-//                    |     |     |     |   |     |     |    |
-            
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   |PGUP | HME | UP  | END |  {  |   }  |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |PGDWN| LFT | DWN |RGHT |  [  |   ]  |
+            // | F12  | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  |  F8 | F9  | F10 |  F11 |
+            //                    |     |     |     |   |     |     |    |
+
             display-name = "raise";
             bindings = <
-    &trans      &trans        &trans        &trans        &trans        &trans          &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp LS(LBRC)  &kp LS(RBRC)
-    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT      &kp RBKT
-    &kp F12     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6     &kp F7    &kp F8    &kp F9     &kp F10       &kp F11
-                                            &trans        &trans        &trans          &trans     &trans    &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp LS(LBRC)  &kp LS(RBRC)
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT      &kp RBKT
+&kp F12     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6     &kp F7    &kp F8    &kp F9     &kp F10       &kp F11
+                                        &trans        &trans        &trans          &trans     &trans    &trans
             >;
         };
     };
