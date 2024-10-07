@@ -53,12 +53,12 @@
         };
 
         Esc {
-            bindings = <&none>;
+            bindings = <&kp ESC>;
             key-positions = <4 3>;
         };
 
         Tab {
-            bindings = <&none>;
+            bindings = <&kp TAB>;
             key-positions = <2 3>;
         };
     };
