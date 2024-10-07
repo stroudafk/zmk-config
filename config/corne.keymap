@@ -51,6 +51,16 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <33 32>;
         };
+
+        Esc {
+            bindings = <&none>;
+            key-positions = <4 3>;
+        };
+
+        Tab {
+            bindings = <&none>;
+            key-positions = <2 3>;
+        };
     };
 
     behaviors {
@@ -103,11 +113,11 @@
             // |      |     |     |     |     |     |   |  -  |  -  |  +  |  =  |  \  |   |  |
             //                    |     |     |     |   |     |     |     |
 
-            display-name = "lower";
+            display-name = "sym";
             bindings = <
 &kp ESC  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(TILDE)
 &trans   &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp GRAVE
-&trans   &trans        &trans      &trans         &trans        &trans           &kp LS(UNDER)  &kp MINUS     &kp LS(PLUS)  &kp EQUAL     &kp BSLH      &kp LS(PIPE)
+&trans   &kp PIPE      &kp TILDE   &kp GRAVE      &kp DQT       &kp SQT          &kp LS(UNDER)  &kp MINUS     &kp LS(PLUS)  &kp EQUAL     &kp BSLH      &kp LS(PIPE)
                                    &trans         &trans        &trans           &trans         &trans        &trans
             >;
         };
@@ -119,10 +129,10 @@
             // | F12  | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  |  F8 | F9  | F10 |  F11 |
             //                    |     |     |     |   |     |     |    |
 
-            display-name = "raise";
+            display-name = "nav";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp LS(LBRC)  &kp LS(RBRC)
-&trans      &trans        &trans        &trans        &trans        &trans          &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT      &kp RBKT
+&trans      &kp TAB       &trans        &trans        &trans        &trans          &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT      &kp RBKT
 &kp F12     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6     &kp F7    &kp F8    &kp F9     &kp F10       &kp F11
                                         &trans        &trans        &trans          &trans     &trans    &trans
             >;
