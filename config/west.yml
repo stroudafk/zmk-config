@@ -2,12 +2,19 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+      # Additional modules containing boards/shields/custom code can be listed here as well
+      # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+  projects:
+    - name: jlw # You can name this whatever you like; just make sure the "remote" below matches.
+      url-base: https://github.com/josh-l-wang
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    # Add the name of the repository as a project.
+    - name: zmk-config-jlw
+      remote: jlw
+      revision: main # This is the name of the branch you want to use.
   self:
     path: config
