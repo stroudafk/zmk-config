@@ -122,15 +122,15 @@
 
         layer_2 {
             // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |   |PGUP | HME | UP  | END |  {  |   }  |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |PGDWN| LFT | DWN |RGHT |  [  |   ]  |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |PGUP | HME | UP  | END | DEL |   }  |
+            // |      | TAB | ESC | BT3 | BT4 | BT5 |   |PGDWN| LFT | DWN |RGHT | DEL |   ]  |
             // | F12  | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  |  F8 | F9  | F10 |  F11 |
             //                    |     |     |     |   |     |     |    |
 
             display-name = "nav";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp LS(LBRC)  &kp LS(RBRC)
-&trans      &kp TAB       &trans        &trans        &trans        &trans          &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT      &kp RBKT
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DEL  &kp LS(RBRC)
+&trans      &kp TAB       &kp TAB       &kp ESC        &trans        &trans          &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL      &kp RBKT
 &kp F12     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6     &kp F7    &kp F8    &kp F9     &kp F10       &kp F11
                                         &trans        &trans        &kp ENTER       &trans     &trans    &trans
             >;
