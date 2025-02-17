@@ -99,7 +99,7 @@
             bindings = <
 &kp TAB           &kp Q                &kp W            &kp E            &kp R              &kp T      &kp Y      &kp U               &kp I             &kp O             &kp P                         &kp BSPC
 &mt LCTRL ESCAPE  &hrm LEFT_CONTROL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D  &hrs LEFT_SHIFT F  &kp G      &kp H      &hrs RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm RIGHT_ALT L  &hrm RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT         &hrs LEFT_SHIFT Z    &kp X            &kp C            &kp V              &kp B      &kp N      &kp M               &kp COMMA         &kp DOT           &hrs LEFT_SHIFT FSLH          &mt RSHIFT ENTER
+&kp LSHFT         &hrs LEFT_SHIFT Z    &kp X            &kp C            &kp V              &kp B      &kp N      &kp M               &kp COMMA         &kp DOT           &hrs RIGHT_SHIFT FSLH          &mt RSHIFT ENTER
                                                         &kp LGUI         &mo 1              &kp ESC    &kp SPACE  &mo 2               &kp RALT
             >;
         };
