@@ -98,7 +98,7 @@
         &hrm LEFT_CONTROL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D  &hrs LEFT_SHIFT F  &kp G      &kp H      &hrs RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm RIGHT_ALT L  &hrm RIGHT_CONTROL SEMICOLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
-             &kp Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+             &hrs LEFT_SHIFT Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &hrs RIGHT_SHIFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ESC    &mo 1         &kp C_MUTE         &lt 2 SPACE  &kp RIGHT_ALT
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯                                           
