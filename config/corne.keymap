@@ -113,10 +113,10 @@
 
             display-name = "sym";
             bindings = <
-&kp ESC  &kp TILDE        &kp LBKT   &kp LBRC   &kp LPAR    &kp GRAVE      &kp PIPE       &kp LS(RIGHT_PARENTHESIS)  &kp LS(RIGHT_BRACE)  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp LS(BACKSLASH)
-&trans   &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS                   &kp STAR             &kp LESS_THAN          &kp GREATER_THAN   &kp GRAVE
-&trans   &kp PIPE         &kp TILDE  &kp GRAVE  &kp DQT     &kp SQT        &kp LS(UNDER)  &kp MINUS                  &kp LS(PLUS)         &kp EQUAL              &kp BSLH           &kp LS(PIPE)
-                                     &trans     &trans      &trans         &kp BACKSPACE  &trans                     &trans
+&trans  &kp LESS_THAN    &kp LBKT   &kp LBRC   &kp LPAR    &kp GRAVE      &kp PIPE       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp GREATER_THAN  &trans
+&trans  &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS               &kp STAR         &kp TILDE  &kp GRAVE         &trans
+&trans  &kp PIPE         &kp TILDE  &kp GRAVE  &kp DQT     &kp SQT        &kp LS(UNDER)  &kp MINUS              &kp LS(PLUS)     &kp EQUAL  &kp BSLH          &trans
+                                    &trans     &trans      &trans         &kp BACKSPACE  &trans                 &trans
             >;
         };
 
@@ -129,10 +129,10 @@
 
             display-name = "nav";
             bindings = <
-&trans   &kp LS(FSLH)  &kp N7  &kp N8  &kp N9   &kp STAR     &kp PG_UP  &kp HOME   &kp UP    &kp END    &kp CAPS  &kp LS(RBRC)
-&trans   &kp TAB       &kp N4  &kp N5  &kp N6   &kp MINUS    &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp DEL   &kp RBKT
-&kp F12  &kp N0        &kp N1  &kp N2  &kp N3   &kp PLUS     &kp F6     &kp F7     &kp F8    &kp F9     &kp F10   &kp F11
-                               &trans  &kp TAB  &kp ENTER    &trans     &kp RSHFT  &trans
+&trans  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp STAR     &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp CAPS  &trans
+&trans  &kp TAB   &kp N4  &kp N5  &kp N6   &kp MINUS    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL   &trans
+&trans  &kp N0    &kp N1  &kp N2  &kp N3   &kp PLUS     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10   &trans
+                          &trans  &kp TAB  &kp ENTER    &trans     &trans    &trans
             >;
         };
 
