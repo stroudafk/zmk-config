@@ -41,7 +41,7 @@
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |SH/ENT|
-            //                    | GUI | LWR | ESC |   | SPC | RSE  | ALT |
+            //               | GUI | LWR | ESC/SHFT |   | SPC | RSE  | ALT |
 
             display-name = "base";
             bindings = <
@@ -70,16 +70,16 @@
 
         nav {
             // -----------------------------------------------------------------------------------------
-            // |      |  -  |  7  |  8  |  9  |  /  |   |PGUP | HME | UP  | END |BKSP |      |
-            // |      |  -  |  4  |  5  |  6  |  *  |   |PGDWN| LFT | DWN |RGHT | DEL |      |
-            // |      |  +  |  1  |  2  |  3  | TAB |   |sl 3 |CAPS |     |RSHFT|RSHFT|      |
+            // |      |  -  |  7  |  8  |  9  |  /  |   |PGUP | HME | UP  | END |BKSP  |      |
+            // |      |  -  |  4  |  5  |  6  |  *  |   |PGDWN| LFT | DWN |RGHT | DEL  |      |
+            // |      |  +  |  1  |  2  |  3  | TAB |   |sl 3 |CAPS |CWORD|RSHFT|ORSHFT|      |
             //                    |     |  0  | ENT |   |     |     |    |
 
             display-name = "nav";
             bindings = <
-&trans  &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_SLASH       &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp BACKSPACE    &trans
-&trans  &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL          &trans
-&trans  &kp KP_PLUS   &kp N1  &kp N2  &kp N3  &kp TAB            &sl 3      &kp CAPS  &trans    &kp RSHFT  &kp RSHFT        &trans
+&trans  &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_SLASH       &kp PG_UP  &kp HOME  &kp UP     &kp END    &kp BACKSPACE    &trans
+&trans  &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY    &kp PG_DN  &kp LEFT  &kp DOWN   &kp RIGHT  &kp DEL          &trans
+&trans  &kp KP_PLUS   &kp N1  &kp N2  &kp N3  &kp TAB            &sl 3      &kp CAPS  &caps_word &kp RSHFT  &sk RSHFT        &trans
                               &trans  &kp N0  &kp ENTER          &trans     &trans    &trans
             >;
         };
