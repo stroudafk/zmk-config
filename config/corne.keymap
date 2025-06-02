@@ -63,7 +63,7 @@
             display-name = "cole";
             bindings = <
 &kp TAB           &kp Q                &kp W            &kp F            &kp P              &kp B      &kp J      &kp L               &kp U             &kp Y             &kp SEMI                         &kp BSPC
-&mt LCTRL ESCAPE  &hrm LEFT_CONTROL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D  &hrs LEFT_SHIFT F  &kp G      &kp H      &hrs RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm RIGHT_ALT L  &hrm RIGHT_CONTROL O             &kp SQT
+&mt LCTRL ESCAPE  &hrm LEFT_CONTROL A  &hrm LEFT_ALT R  &hrm LEFT_GUI S  &hrs LEFT_SHIFT T  &kp G      &kp M      &hrs RIGHT_SHIFT N  &hrm RIGHT_GUI E  &hrm RIGHT_ALT I  &hrm RIGHT_CONTROL O             &kp SQT
 &kp LSHFT         &kp Z                &kp X            &kp C            &kp D              &kp V      &kp K      &kp H               &kp COMMA         &kp DOT           &kp FSLH                      &mt RSHIFT ENTER
                                                         &kp LGUI         &mo 2              &kp ESC    &kp SPACE  &mo 3               &kp RALT
             >;
@@ -110,7 +110,7 @@
         bt {
             display-name = "bt";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &to 1   &kp F11 &kp F12  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &tog 1  &kp F11 &kp F12  &trans
 &kp F12     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans   &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
