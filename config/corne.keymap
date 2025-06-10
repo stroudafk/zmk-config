@@ -49,7 +49,23 @@
 &kp TAB           &kp Q                &kp W            &kp E            &kp R              &kp T      &kp Y      &kp U               &kp I             &kp O             &kp P                         &kp BSPC
 &mt LCTRL ESCAPE  &hrm LEFT_CONTROL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D  &hrs LEFT_SHIFT F  &kp G      &kp H      &hrs RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm RIGHT_ALT L  &hrm RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT         &kp Z                &kp X            &kp C            &kp V              &kp B      &kp N      &kp M               &kp COMMA         &kp DOT           &kp FSLH                      &mt RSHIFT ENTER
-                                                        &kp LGUI         &mo 1              &kp ESC    &kp SPACE  &mo 2               &kp RALT
+                                                        &kp LGUI         &mo 2              &kp ESC    &kp SPACE  &mo 3               &kp RALT
+            >;
+        };
+
+        cole {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |SH/ENT|
+            //                    | GUI | LWR | ESC |   | SPC | RSE  | ALT |
+
+            display-name = "cole";
+            bindings = <
+&kp TAB           &kp Q                &kp W            &kp F            &kp P              &kp B      &kp J      &kp L               &kp U             &kp Y             &kp SEMI                         &kp BSPC
+&mt LCTRL ESCAPE  &hrm LEFT_CONTROL A  &hrm LEFT_ALT R  &hrm LEFT_GUI S  &hrs LEFT_SHIFT T  &kp G      &kp M      &hrs RIGHT_SHIFT N  &hrm RIGHT_GUI E  &hrm RIGHT_ALT I  &hrm RIGHT_CONTROL O             &kp SQT
+&kp LSHFT         &kp Z                &kp X            &kp C            &kp D              &kp V      &kp K      &kp H               &kp COMMA         &kp DOT           &kp FSLH                      &mt RSHIFT ENTER
+                                                        &kp LGUI         &mo 2              &kp ESC    &kp SPACE  &mo 3               &kp RALT
             >;
         };
 
@@ -57,14 +73,14 @@
             // -----------------------------------------------------------------------------------------
             // |      |  <  |  [  |  {  |  (  |  ~  |   |  |  |  )  |  }  |  ]  |  >  |      |
             // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  '  |  "  |      |
-            // |      |  \  |  ~  |  `  |  :  |     |   |  _  |  -  |  +  |  =  |  ?  |      |
+            // |      |  \  |  ~  |  `  |  :  |  ;  |   |  _  |  -  |  +  |  =  |  ?  |      |
             //                    |     |     |     |   | BKSP| TAB |     |
 
             display-name = "sym";
             bindings = <
 &trans  &kp LESS_THAN    &kp LBKT   &kp LBRC   &kp LPAR    &kp TILDE      &kp PIPE       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp GREATER_THAN  &trans
 &trans  &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS               &kp STAR         &kp SQT    &kp DQT           &trans
-&trans  &kp BSLH         &kp TILDE  &kp GRAVE  &kp COLON   &trans         &kp UNDER      &kp MINUS              &kp PLUS         &kp EQUAL  &kp QMARK         &trans
+&trans  &kp BSLH         &kp TILDE  &kp GRAVE  &kp COLON   &kp SEMI       &kp UNDER      &kp MINUS              &kp PLUS         &kp EQUAL  &kp QMARK         &trans
                                     &trans     &trans      &trans         &kp BACKSPACE  &kp TAB                &trans
             >;
         };
@@ -80,7 +96,7 @@
             bindings = <
 &trans  &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_SLASH       &kp PG_UP  &kp HOME  &kp UP     &kp END    &kp BACKSPACE    &trans
 &trans  &kp KP_MINUS  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY    &kp PG_DN  &kp LEFT  &kp DOWN   &kp RIGHT  &kp DEL          &trans
-&trans  &kp KP_PLUS   &kp N1  &kp N2  &kp N3  &kp TAB            &sl 3      &kp CAPS  &caps_word &kp RSHFT  &sk RSHFT        &trans
+&trans  &kp KP_PLUS   &kp N1  &kp N2  &kp N3  &kp TAB            &sl 4      &kp CAPS  &caps_word &kp RSHFT  &sk RSHFT        &trans
                               &trans  &kp N0  &kp ENTER          &trans     &trans    &trans
             >;
         };
@@ -94,7 +110,7 @@
         bt {
             display-name = "bt";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &tog 1  &kp F11 &kp F12  &trans
 &kp F12     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans   &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
