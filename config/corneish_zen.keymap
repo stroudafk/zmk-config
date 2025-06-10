@@ -15,59 +15,6 @@
   };
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-
-        Backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <19 18>;
-            timeout-ms = <30>;
-        };
-
-        CapsLock {
-            bindings = <&kp CAPS>;
-            key-positions = <5 4>;
-            timeout-ms = <30>;
-        };
-
-        LParenthesis {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <7 6>;
-            timeout-ms = <30>;
-        };
-
-        RParenthesis {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <8 7>;
-            timeout-ms = <30>;
-        };
-
-        LBrace {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <17 16>;
-            timeout-ms = <30>;
-        };
-
-        RBrace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <18 17>;
-            timeout-ms = <30>;
-        };
-
-        LBracket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <27 26>;
-            timeout-ms = <30>;
-        };
-
-        RBracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <28 27>;
-            timeout-ms = <30>;
-        };
-    };
-
     behaviors {
         hrm: homewrow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -92,47 +39,63 @@
         };
     };
 
-
+  // TODO: change graphics to match, confirm thumb keys
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-                        label = "base";
+            label = "base";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮                      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │                      │  Y       │  U       │  I       │  O       │  P       │
              &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp U      &kp I      &kp O      &kp P      
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │                      │  H       │  J       │  K       │  L       │  ;:       │
-        &hrm LEFT_CONTROL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D  &hrs LEFT_SHIFT F  &kp G      &kp H      &hrs RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm RIGHT_ALT L  &hrm RIGHT_CONTROL SEMICOLON
+        &hrm LCTRL A  &hrm LALT S  &hrm LGUI D  &hrs LSHFT F  &kp G                     &kp H   &hrs RSHFT J  &hrm RGUI K  &hrm RALT L  &hrm RCTRL SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp LGUI    &mo 1      &kp ESC                         &kp SPACE  &mo 2 &kp RIGHT_ALT
+                                  &kp LGUI    &mo 2      &kp ESC                         &kp SPACE  &mo 3 &kp RIGHT_ALT
+        //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯                                   
+            >;
+        cole {
+            label = "cole";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮                      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  W       │  E       │  R       │  T       │                      │  Y       │  U       │  I       │  O       │  P       │
+             &kp Q      &kp W      &kp F      &kp P      &kp B                             &kp J      &kp L      &kp U      &kp Y      &kp SEMI      
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  S       │  D       │  F       │  G       │                      │  H       │  J       │  K       │  L       │  ;:       │
+        &hrm LCTRL A  &hrm LALT R  &hrm LGUI S  &hrs LSHFT T  &kp G                     &kp M   &hrs RSHFT N  &hrm RGUI E  &hrm RALT I  &hrm RCTRL O
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
+             &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                  &kp LGUI    &mo 2      &kp ESC                         &kp SPACE  &mo 3 &kp RIGHT_ALT
         //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯                                   
             >;
         };
 
         sym_layer {
-                        label = "sym";
+            label = "sym";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │   #      │    $     │     %    │      │  ^       │   &      │  *       │  (       │  )       │
-        &kp LESS_THAN    &kp LBKT   &kp LBRC   &kp LPAR    &kp GRAVE      &kp PIPE       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp GREATER_THAN
+        &kp LESS_THAN    &kp LBKT   &kp LBRC   &kp LPAR    &kp TILDE      &kp PIPE       &kp RPAR     &kp RBRC    &kp RBKT   &kp GREATER_THAN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  1       │  2       │  3       │  4       │  5       │      │  6       │  7       │  8       │  9       │  0       │
-        &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS               &kp STAR         &kp TILDE  &kp GRAVE
+        &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS     &kp STAR    &kp SQT    &kp DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   |      │ ~        │ `~       │  "       │ '"       │      │  _       │   -      │  +       │  =       │  \       │
-        &kp PIPE         &kp TILDE  &kp GRAVE  &kp DQT     &kp SQT        &kp LS(UNDER)  &kp MINUS              &kp LS(PLUS)     &kp EQUAL  &kp BSLH
+        &kp BSLH         &kp TILDE  &kp GRAVE  &kp COLON   &kp SEMI       &kp UNDER      &kp MINUS    &kp PLUS    &kp EQUAL  &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   &trans      &trans    &trans        &kp BACKSPACE  &trans     &trans
+                                   &trans     &trans      &trans         &kp BACKSPACE  &kp TAB  &trans
         //                      ╰──────────┴──────────┴──────────╯      ╰──────────┴──────────┴──────────╯
             >;
         };
 
         nav_layer {
-                        label = "nav";
+            label = "nav";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│     -    │     7    │     8    │     9    │     /    │      │  PG UP   │  HOME    │    UP    │  END     │  INSERT  │
@@ -141,7 +104,7 @@
         //│     +    │     4    │     5    │    6     │    *     │      │  PG DN   │  LEFT    │  DOWN    │  RIGHT   │  DEL     │
           &kp KP_PLUS   &kp N4  &kp N5  &kp N6   &kp KP_MULTIPLY          &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT   &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    0     │     1    │     2    │    3      │    =     │      │          │  CAPS    │          │  SLOCK   │          │
+        //│    0     │     1    │     2    │    3     │    =     │      │          │  CAPS    │          │  SLOCK   │          │
             &kp N0      &kp N1    &kp N2      &kp N3   &kp EQUAL          &trans     &kp CAPS  &trans    &kp SCROLLLOCK  &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                 &bootloader  &kp TAB     &kp ENTER         &trans      &trans   &sys_reset
@@ -149,6 +112,23 @@
             >;
         };
 
+        bt {
+            display-name = "bt";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│     -    │     7    │     8    │     9    │     /    │      │  PG UP   │  HOME    │    UP    │  END     │  INSERT  │
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &tog 1  &kp F11 &kp F12  &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│     +    │     4    │     5    │    6     │    *     │      │  PG DN   │  LEFT    │  DOWN    │  RIGHT   │  DEL     │
+        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│    0     │     1    │     2    │    3     │    =     │      │          │  CAPS    │          │          │          │
+            &trans      &trans     &trans     &trans     &trans          &trans      &trans      &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        &trans        &trans        &trans          &trans  &trans  &trans
+        //                      ╰──────────┴──────────┴──────────╯      ╰──────────┴──────────┴──────────╯
+            >;
+        };
     };
 
 };
