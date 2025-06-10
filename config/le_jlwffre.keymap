@@ -77,13 +77,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │   #      │    $     │     %    │      │  ^       │   &      │  *       │  (       │  )       │
-        &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
+        &kp LESS_THAN    &kp LBKT   &kp LBRC   &kp LPAR    &kp TILDE      &kp PIPE       &kp RPAR     &kp RBRC    &kp RBKT   &kp GREATER_THAN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  1       │  2       │  3       │  4       │  5       │      │  6       │  7       │  8       │  9       │  0       │
-            &kp N1      &kp N2     &kp N3    &kp N4      &kp N5           &kp N6      &kp N7     &kp N8     &kp N9     &kp N0
+        &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS     &kp STAR    &kp SQT    &kp DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   |      │ ~        │ `~       │  "       │ '"       │      │  _       │   -      │  +       │  =       │  \       │
-            &kp PIPE   &kp TILDE &kp GRAVE   &kp DQT   &kp SQT          &kp LS(UNDER)  &kp MINUS  &kp LS(PLUS)  &kp EQUAL  &kp BSLH
+        &kp BSLH         &kp TILDE  &kp GRAVE  &kp COLON   &kp SEMI       &kp UNDER      &kp MINUS    &kp PLUS    &kp EQUAL  &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    &trans         &trans        &trans           &kp BACKSPACE  &kp TAB
         //                                 ╰──────────┴──────────╯      ╰──────────┴──────────╯
