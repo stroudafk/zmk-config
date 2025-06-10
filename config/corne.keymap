@@ -37,19 +37,19 @@
     keymap {
         compatible = "zmk,keymap";
 
-        cole {
+        col {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
             // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |SH/ENT|
             //                    | GUI | LWR | ESC |   | SPC | RSE  | ALT |
 
-            display-name = "cole";
+            display-name = "col";
             bindings = <
-&kp TAB           &kp Q                &kp W            &kp F            &kp P              &kp B      &kp J      &kp L               &kp U             &kp Y             &kp SEMI                         &kp BSPC
-&mt LCTRL ESCAPE  &hrm LEFT_CONTROL A  &hrm LEFT_ALT R  &hrm LEFT_GUI S  &hrs LEFT_SHIFT T  &kp G      &kp M      &hrs RIGHT_SHIFT N  &hrm RIGHT_GUI E  &hrm RIGHT_ALT I  &hrm RIGHT_CONTROL O             &kp SQT
-&kp LSHFT         &kp Z                &kp X            &kp C            &kp D              &kp V      &kp K      &kp H               &kp COMMA         &kp DOT           &kp FSLH                      &mt RSHIFT ENTER
-                                                        &kp LGUI         &mo 2              &kp ESC    &kp SPACE  &mo 3               &kp RALT
+&kp TAB           &kp Q           &kp W         &kp F         &kp P           &kp B      &kp J      &kp L           &kp U        &kp Y          &kp SEMI       &kp BSPC
+&mt LCTRL ESCAPE  &hrm LCTRL A    &hrm LALT R   &hrm LGUI S   &hrs LSHIFT T   &kp G      &kp M      &hrs RSHIFT N   &hrm RGUI E  &hrm RALT I    &hrm RCTRL O   &kp SQT
+&kp LSHFT         &kp Z           &kp X         &kp C         &kp D           &kp V      &kp K      &kp H           &kp COMMA    &kp DOT        &kp FSLH       &mt RSHIFT ENTER
+                                                        &kp LGUI         &mo 2              &kp ESC    &kp SPACE      &mo 3        &kp RALT
             >;
         };
 
@@ -62,9 +62,9 @@
 
             display-name = "qwr";
             bindings = <
-&kp TAB           &kp Q                &kp W            &kp E            &kp R              &kp T      &kp Y      &kp U               &kp I             &kp O             &kp P                         &kp BSPC
-&mt LCTRL ESCAPE  &hrm LEFT_CONTROL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D  &hrs LEFT_SHIFT F  &kp G      &kp H      &hrs RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm RIGHT_ALT L  &hrm RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT         &kp Z                &kp X            &kp C            &kp V              &kp B      &kp N      &kp M               &kp COMMA         &kp DOT           &kp FSLH                      &mt RSHIFT ENTER
+&kp TAB           &kp Q           &kp W         &kp E         &kp R          &kp T      &kp Y      &kp U            &kp I        &kp O          &kp P            &kp BSPC
+&mt LCTRL ESCAPE  &hrm LCTRL A    &hrm LALT S   &hrm LGUI D   &hrs LSHIFT F  &kp G      &kp H      &hrs RSHIFT J    &hrm RGUI K  &hrm RALT L    &hrm RCTRL SEMI  &kp SQT
+&kp LSHFT         &kp Z           &kp X         &kp C         &kp V          &kp B      &kp N      &kp M            &kp COMMA    &kp DOT        &kp FSLH         &mt RSHIFT ENTER
                                                         &kp LGUI         &mo 2              &kp ESC    &kp SPACE  &mo 3               &kp RALT
             >;
         };
@@ -78,10 +78,10 @@
 
             display-name = "sym";
             bindings = <
-&trans  &kp LESS_THAN    &kp LBKT   &kp LBRC   &kp LPAR    &kp TILDE      &kp PIPE       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp GREATER_THAN  &trans
-&trans  &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS               &kp STAR         &kp SQT    &kp DQT           &trans
-&trans  &kp BSLH         &kp TILDE  &kp GRAVE  &kp COLON   &kp SEMI       &kp UNDER      &kp MINUS              &kp PLUS         &kp EQUAL  &kp QMARK         &trans
-                                    &trans     &trans      &trans         &kp BACKSPACE  &kp TAB                &trans
+&trans  &kp LESS_THAN    &kp LBKT   &kp LBRC   &kp LPAR    &kp TILDE      &kp PIPE       &kp RPAR   &kp RBRC  &kp RBKT   &kp GREATER_THAN  &trans
+&trans  &kp EXCLAMATION  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET      &kp AMPS   &kp STAR  &kp SQT    &kp DQT           &trans
+&trans  &kp BSLH         &kp TILDE  &kp GRAVE  &kp COLON   &kp SEMI       &kp UNDER      &kp MINUS  &kp PLUS  &kp EQUAL  &kp QMARK         &trans
+                                    &trans     &trans      &trans         &kp BACKSPACE  &kp TAB    &trans
             >;
         };
 
@@ -102,7 +102,7 @@
         };
 
         // -----------------------------------------------------------------------------------------
-        // | BT5  | BT1 | BT2 | BT3 | BT4 |BTCLR|   |     |     |     |     |     |     |
+        // | BT5  | BT1 | BT2 | BT3 | BT4 |BTCLR|   |     |     |     | F11 | F12 |     |
         // | F12  | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  |  F8 | F9  | F10 | F11 |
         // |      |     |     |     |     |     |   |     |     |     |     |     |     |
         //                    |     |     |     |   |     |     |     |
