@@ -34,7 +34,7 @@
         };
 
         lh: layer_hold {
-          compabible = "zmk,behavior-hold-tap";
+          compatible = "zmk,behavior-hold-tap";
           label = "LAYER_HOLD";
           bindings = <&mo>, <&kp>;
 
