@@ -86,7 +86,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │                      │  K       │  H       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp LGUI    &mo 2      &kp BSPC                         &kp SPACE  &mo 3 &kp RIGHT_ALT
+                                  &kp LGUI    &mo 2      &bspc                         &kp SPACE  &mo 3 &kp RIGHT_ALT
         //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -104,7 +104,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp LGUI    &mo 2      &kp BSPC                         &kp SPACE  &mo 3 &kp RIGHT_ALT
+                                  &kp LGUI    &mo 2      &bspc                         &kp SPACE  &mo 3 &kp RIGHT_ALT
         //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯
             >;
         };

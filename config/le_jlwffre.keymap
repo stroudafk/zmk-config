@@ -79,7 +79,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LGUI    &lhbs 2        &kp C_MUTE      &lt 3 SPACE  &kp RIGHT_ALT
+                                             &kp LGUI    &lhbs 2 0       &kp C_MUTE      &lt 3 SPACE  &kp RIGHT_ALT
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -97,7 +97,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LGUI    &lhbs 2        &kp C_MUTE      &lt 3 SPACE  &kp RIGHT_ALT
+                                             &kp LGUI    &lhbs 2 0       &kp C_MUTE      &lt 3 SPACE  &kp RIGHT_ALT
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
