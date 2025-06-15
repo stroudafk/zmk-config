@@ -43,9 +43,9 @@
           flavor = "hold-preferred";
         };
 
-        bspc: bspc_del_override {
+        bspc: bspc_del_on_shift {
             compatible = "zmk,behavior-mod-morph";
-            label = "BSPC";
+            label = "BSPC_DEL_ON_SHIFT";
             bindings = <&kp BSPC>, <&kp DEL>;
 
             #binding-cells = <0>;
@@ -54,13 +54,32 @@
 
         // the following only USES one argument but requires 2, so pass in the layer as the
         // first param and a dummy value like 0 as second
-        lhbs: lhbs {
+        lhbs: layer_hold_bspc_override {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER-HOLD-BSPC-OVERRIDE";
+            label = "LAYER_HOLD_BSPC_OVERRIDE";
             bindings = <&mo>, <&bspc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        space: space_tab_on_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_TAB_ON_SHIFT";
+            bindings = <&kp SPACE>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        ltsp: layer_tap_space_override {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_SPACE_OVERRIDE";
+            bindings = <&mo>, <&space>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -79,7 +98,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LGUI    &lhbs 2 0       &kp C_MUTE      &lt 3 SPACE  &kp RIGHT_ALT
+                                             &kp LGUI    &lhbs 2 0       &kp C_MUTE      &ltsp 3 0  &kp RIGHT_ALT
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -97,7 +116,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LGUI    &lhbs 2 0       &kp C_MUTE      &lt 3 SPACE  &kp RIGHT_ALT
+                                             &kp LGUI    &lhbs 2 0       &kp C_MUTE      &ltsp 3 0  &kp RIGHT_ALT
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
