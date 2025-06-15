@@ -32,6 +32,37 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 17 4 16 5 29 28 37 36 38 27 15 3 2 14 26 25 13 1 0 12 24>;
             flavor = "balanced";
         };
+
+        lh: layer_hold {
+          compatible = "zmk,behavior-hold-tap";
+          label = "LAYER_HOLD";
+          bindings = <&mo>, <&kp>;
+
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          flavor = "hold-preferred";
+        };
+
+        bspc: bspc_del_override {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPC";
+            bindings = <&kp BSPC>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // the following only USES one argument but requires 2, so pass in the layer as the
+        // first param and a dummy value like 0 as second
+        lhbs: lhbs {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER-HOLD-BSPC-OVERRIDE";
+            bindings = <&mo>, <&bspc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
     };
 
     keymap {
@@ -49,7 +80,7 @@
 &kp TAB           &kp Q           &kp W         &kp F         &kp P           &kp B      &kp J      &kp L           &kp U        &kp Y          &kp SEMI       &kp BSPC
 &mt LCTRL ESCAPE  &hrm LCTRL A    &hrm LALT R   &hrm LGUI S   &hrs LSHIFT T   &kp G      &kp M      &hrs RSHIFT N   &hrm RGUI E  &hrm RALT I    &hrm RCTRL O   &kp SQT
 &kp LSHFT         &kp Z           &kp X         &kp C         &kp D           &kp V      &kp K      &kp H           &kp COMMA    &kp DOT        &kp FSLH       &mt RSHIFT ENTER
-                                                        &kp LGUI         &mo 2              &kp BSPC    &kp SPACE      &mo 3        &kp RALT
+                                                        &kp LGUI         &mo 2              &bspc    &kp SPACE      &mo 3        &kp RALT
             >;
         };
 
@@ -65,7 +96,7 @@
 &kp TAB           &kp Q           &kp W         &kp E         &kp R          &kp T      &kp Y      &kp U            &kp I        &kp O          &kp P            &kp BSPC
 &mt LCTRL ESCAPE  &hrm LCTRL A    &hrm LALT S   &hrm LGUI D   &hrs LSHIFT F  &kp G      &kp H      &hrs RSHIFT J    &hrm RGUI K  &hrm RALT L    &hrm RCTRL SEMI  &kp SQT
 &kp LSHFT         &kp Z           &kp X         &kp C         &kp V          &kp B      &kp N      &kp M            &kp COMMA    &kp DOT        &kp FSLH         &mt RSHIFT ENTER
-                                                        &kp LGUI         &mo 2              &kp BSPC    &kp SPACE  &mo 3               &kp RALT
+                                                        &kp LGUI         &mo 2              &bspc    &kp SPACE  &mo 3               &kp RALT
             >;
         };
 
