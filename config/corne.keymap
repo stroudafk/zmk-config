@@ -69,7 +69,7 @@
             bindings = <&kp SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         ltsp: layer_tap_space_override {
