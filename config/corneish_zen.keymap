@@ -115,7 +115,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │                      │  K       │  H       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp LGUI    &mo 2      &bspc                     &spc_tab_sft_tab  &mo 3 &kp RIGHT_ALT
+                                  &kp LGUI    &mo 2      &bspc_del                     &spc_tab_sft_tab  &mo 3 &kp RIGHT_ALT
         //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -133,7 +133,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp LGUI    &mo 2      &bspc                     &spc_tab_sft_tab &mo 3 &kp RIGHT_ALT
+                                  &kp LGUI    &mo 2      &bspc_del                     &spc_tab_sft_tab &mo 3 &kp RIGHT_ALT
         //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯
             >;
         };
