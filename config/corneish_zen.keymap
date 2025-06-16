@@ -50,7 +50,7 @@
           flavor = "hold-preferred";
         };
 
-        bspc_del: bspc_del_on_shift {
+        bspc: bspc_del_on_shift {
             compatible = "zmk,behavior-mod-morph";
             label = "BSPC_DEL_ON_SHIFT";
             bindings = <&kp BSPC>, <&kp DEL>;
@@ -61,17 +61,16 @@
 
         // the following only USES one argument but requires 2, so pass in the layer as the
         // first param and a dummy value like 0 as second
-
         lhbs: layer_hold_bspc_override {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_HOLD_BSPC_OVERRIDE";
-            bindings = <&mo>, <&bspc_del>;
+            bindings = <&mo>, <&bspc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
 
-        spc_tab: space_tab_on_shift {
+        space: space_tab_on_shift {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_TAB_ON_SHIFT";
             bindings = <&kp SPACE>, <&kp TAB>;
@@ -83,20 +82,11 @@
         ltsp: layer_tap_space_override {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_SPACE_OVERRIDE";
-            bindings = <&mo>, <&spc_tab>;
+            bindings = <&mo>, <&space>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        spc_tab_sft_tab: spc_tab_sft_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPC_TAB_SFT_TAB";
-            bindings = <&spc_tab>, <&kp RS(TAB)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
     };
 
@@ -115,7 +105,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │                      │  K       │  H       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp LGUI    &mo 2      &bspc_del                     &spc_tab_sft_tab  &mo 3 &kp RIGHT_ALT
+                                  &kp LGUI    &mo 2      &bspc                              &space  &mo 3 &kp RIGHT_ALT
         //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -133,7 +123,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │                      │  N       │  M       │  , <     │  . >     │  / ?     │
              &kp Z      &kp X      &kp C      &kp V      &kp B                             &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp LGUI    &mo 2      &bspc_del                     &spc_tab_sft_tab &mo 3 &kp RIGHT_ALT
+                                  &kp LGUI    &mo 2      &bspc                              &space  &mo 3 &kp RIGHT_ALT
         //                      ╰──────────┴──────────┴──────────╯                      ╰──────────┴──────────┴──────────╯
             >;
         };
