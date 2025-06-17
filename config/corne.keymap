@@ -91,14 +91,14 @@
             bindings = <&kp ESC>;
             key-positions = <27 26>;
             timeout-ms = <30>;
-            //layers = <0 1>;
+            layers = <0 1>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <32 33>;
             timeout-ms = <30>;
-            //layers = <0 1>;
+            layers = <0 1>;
         };
     };
 
