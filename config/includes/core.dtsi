@@ -450,7 +450,7 @@
             bindings = <CORE( \
                &trans, &kp F12,    &kp F7,     &kp F8,     &kp F9,       &bootloader,    &bootloader,     &df MAC,     &df LIN,      &trans,     &trans, &trans, \
                &trans, &kp F11,    &kp F4,     &kp F5,     &kp F6,       &trans,         &bt BT_CLR, &bt BT_SEL 0, &bt BT_SEL 1, &bt BT_SEL 2, &bt BT_SEL 3, &trans, \
-               &trans, &kp F10,    &kp F1,     &kp F2,     &kp F3,       &sys_reset,     &sys_reset,     &C_BRI_DN,     &trans,     &C_BRI_UP,     &trans, &trans, \
+               &trans, &kp F10,    &kp F1,     &kp F2,     &kp F3,       &sys_reset,     &sys_reset,     &kp C_BRI_DN,     &trans,     &kp C_BRI_UP,     &trans, &trans, \
                                        &trans,     &trans,     &trans,     ENCODER,       &trans,     &trans,     &trans
             )>;
             #ifdef ENCODER
